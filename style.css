@@ -1,0 +1,1391 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #dddbdb;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+    background: #021731;
+    color: white;
+    padding: 15px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.01);
+    filter: brightness(1.1);
+}
+
+.logo img {
+    display: block;
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+}
+
+.menu-nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.menuzinho {
+    color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menuzinho:hover {
+    transform: translateY(-4px) scale(1.05);
+    filter: brightness(2.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.nav a {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    color: #a7a7a7;
+}
+
+/* BOTÃO FALE CONOSCO */
+.btn_faleconosco {
+    display: inline-block;
+    width: 246px;
+    height: 42px;
+    background-image: url(/imagens&icones/BOTÃO\ FALE\ CONOSCO.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.btn_faleconosco:hover {
+    background-image: url(/imagens&icones/FALE\ CONOSCO_hover.png);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+/* MENU HAMBURGUER */
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    z-index: 20;
+}
+
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 999px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* HERO */
+.hero {
+    height: 440px;
+    background-color: #021731;
+    background-image: url(/imagens&icones/Section\ 2.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    margin-left: 10%;
+}
+
+.hero-text h1 span {
+    color: #ffc107;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 15%;
+    background: #fbba23;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.btn-whatsapp img {
+    display: block;
+}
+
+/* SERVIÇOS */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services h1 span {
+    color: #308CFA;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.card {
+    background: white;
+    padding: 7px 5px 20px 5px;
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.361);
+    transition: transform 0.3s ease;
+    
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 0;
+    display: block;
+}
+
+.card-unidade img {
+    width: 100%;
+    height: 120px; /* define uma altura padrão */
+    object-fit: cover; /* corta a imagem sem distorcer */
+    border-radius: 12px; /* opcional, pra manter o estilo */
+}
+
+
+.btn_vertodos {
+    display: inline-block;
+    width: 250px;
+    height: 42px;
+    background-image: url(/imagens&icones/ver\ todos\ os\ servicos.png);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.btn_vertodos:hover {
+    transform: scale(1.02);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    background: #eee;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials span {
+    color: #308CFA;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+/* UNITS */
+.units {
+    background: #021731;
+    color: white;
+    padding: 40px 0;
+}
+
+.units-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.units-list {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.unit {
+    transition: transform 0.3s ease;
+}
+
+.unit:hover {
+    transform: scale(1.03);
+}
+
+.unit img {
+    width: 100%;
+    height: 120px; /* define uma altura padrão */
+    object-fit: cover; /* corta a imagem sem distorcer */
+    border-radius: 12px; /* opcional, pra manter o estilo */
+}
+
+.unit a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.units-left h1 {
+    color: #308CFA;
+}
+
+.units-help {
+    padding-right: 5%;
+    color: #308CFA;
+    text-align: center;
+}
+
+.btn-help {
+    margin-top: 10%;
+    background: #fbba23;
+    border: none;
+    padding: 22px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #021731;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.btn-help:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.nossasunidades {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.estamosproximos {
+    margin-left: 28%;
+}
+
+.unidades {
+    transition: transform 0.3s ease;
+}
+
+.unidades:hover {
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+.footer {
+    background: #021731;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+        padding: 0 24px;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 22px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 15px;
+    }
+
+    .btn_faleconosco {
+        width: 210px;
+        height: 36px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 390px;
+        padding: 60px 24px;
+        background-size: cover;
+        background-position: center right;
+    }
+
+    .hero-text {
+        margin-left: 4%;
+        max-width: 560px;
+    }
+
+    .cards {
+        gap: 24px;
+    }
+
+    .units-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .units-list {
+        gap: 35px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .units-help {
+        padding-right: 0;
+    }
+
+    .estamosproximos {
+        margin-left: 0;
+    }
+}
+
+/* CELULAR COM MENU HAMBURGUER */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .header {
+        padding: 12px 0;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        max-width: 180px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-nav {
+        width: 100%;
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 14px;
+        padding: 18px 0 20px;
+        background: #031d3f;
+        border-radius: 18px;
+        box-shadow: 0 18px 35px rgba(0,0,0,0.28);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .menuzinho {
+        box-shadow: none;
+    }
+
+    .menuzinho:hover {
+        transform: none;
+        filter: none;
+        box-shadow: none;
+    }
+
+    .nav a {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .btn_faleconosco {
+        width: 190px;
+        height: 32px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: none;
+    }
+
+    .hero {
+        min-height: unset;
+        height: auto;
+        padding: 46px 18px 50px;
+        background-size: cover;
+        background-position: center right;
+        position: relative;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(2,23,49,0.96), rgba(2,23,49,0.82), rgba(2,23,49,0.45));
+        pointer-events: none;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        justify-content: center;
+    }
+
+    .hero-text {
+        margin-left: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+        line-height: 1.15;
+    }
+
+    .hero-text h3 {
+        font-size: 15px;
+        line-height: 1.45;
+        font-weight: 500;
+    }
+
+    .btn-whatsapp {
+        margin-top: 28px;
+        padding: 10px 14px;
+        border-radius: 20px;
+    }
+
+    .btn-whatsapp img {
+        width: 230px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .services {
+        padding: 42px 16px;
+    }
+
+    .services h1 {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        margin: 28px 0;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 310px;
+        padding: 8px 8px 22px;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .card p {
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .btn_vertodos {
+        width: 240px;
+        max-width: 100%;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .testimonials {
+        padding: 42px 10px;
+        overflow: hidden;
+    }
+
+    .testimonials h2 {
+        font-size: 22px;
+        line-height: 1.25;
+    }
+
+    .testimonial-cards {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .testimonial-cards > div {
+        max-width: 100%;
+    }
+
+    .units {
+        padding: 46px 0;
+    }
+
+    .units-content {
+        flex-direction: column;
+        gap: 36px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .units-left {
+        width: 100%;
+    }
+
+    .nossasunidades {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nossasunidades img {
+        width: 46px;
+        height: auto;
+    }
+
+    .nossasunidades h1 {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    .estamosproximos {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+    .estamosproximos h3 {
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .unidades {
+        width: 245px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .units-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        width: 100%;
+    }
+
+    .unit {
+        width: 100%;
+        max-width: 310px;
+    }
+
+    .unit img {
+        width: 100%;
+        max-width: 310px;
+        border-radius: 14px;
+    }
+
+    .unit h3 {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #308CFA;
+    }
+
+    .unit p {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .units-help {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .units-help h1 {
+        font-size: 28px;
+    }
+
+    .btn-help {
+        margin-top: 16px;
+        padding: 18px 26px;
+        border-radius: 22px;
+        font-size: 17px;
+    }
+
+    .footer {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+}
+
+/* CELULAR PEQUENO */
+@media (max-width: 420px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    .btn_faleconosco {
+        width: 176px;
+        height: 30px;
+    }
+
+    .hero {
+        padding: 42px 14px 46px;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+    }
+
+    .hero-text h3 {
+        font-size: 14px;
+    }
+
+    .services h1,
+    .testimonials h2 {
+        font-size: 21px;
+    }
+
+    .card {
+        max-width: 285px;
+    }
+
+    .nossasunidades h1,
+    .units-help h1 {
+        font-size: 25px;
+    }
+}
+
+
+
+/* =========================
+   PÁGINA SOBRE NÓS
+========================= */
+
+.sobre-hero {
+    background:
+        linear-gradient(90deg, rgba(2,23,49,0.98), rgba(2,23,49,0.88), rgba(2,23,49,0.62)),
+        url(/imagens&icones/Section\ 2.png);
+    background-size: cover;
+    background-position: center right;
+    color: white;
+    padding: 90px 0;
+}
+
+.sobre-hero-content {
+    max-width: 820px;
+}
+
+.sobre-etiqueta {
+    display: inline-block;
+    background: rgba(48,140,250,0.18);
+    color: #7bb8ff;
+    border: 1px solid rgba(48,140,250,0.45);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+}
+
+.sobre-hero h1 {
+    font-size: 48px;
+    line-height: 1.08;
+    margin-bottom: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sobre-hero h1 span {
+    color: #ffc107;
+}
+
+.sobre-hero p {
+    font-size: 19px;
+    line-height: 1.55;
+    max-width: 720px;
+    color: rgba(255,255,255,0.92);
+}
+
+.sobre-cta {
+    display: inline-block;
+    margin-top: 30px;
+    background: #fbba23;
+    color: #021731;
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sobre-cta:hover {
+    transform: translateY(-3px) scale(1.03);
+    filter: brightness(1.04);
+}
+
+.sobre-section {
+    padding: 70px 0;
+    background: #dddbdb;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    gap: 46px;
+    align-items: center;
+}
+
+.sobre-texto {
+    background: white;
+    padding: 42px;
+    border-radius: 28px;
+    box-shadow: 0 16px 35px rgba(0,0,0,0.16);
+}
+
+.sobre-texto h2 {
+    color: #021731;
+    font-size: 34px;
+    margin-bottom: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sobre-texto h2::after {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 4px;
+    background: #308CFA;
+    border-radius: 999px;
+    margin-top: 12px;
+}
+
+.sobre-texto p {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.sobre-destaque {
+    background: #021731;
+    color: white;
+    padding: 26px;
+    border-radius: 22px;
+    margin: 26px 0;
+    border-left: 6px solid #308CFA;
+}
+
+.sobre-destaque h3 {
+    color: #ffc107;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.sobre-destaque p {
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 0;
+}
+
+.sobre-video-card {
+    background: #021731;
+    padding: 16px;
+    border-radius: 28px;
+    box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sobre-pilares {
+    background: #f3f3f3;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.sobre-pilares h2 {
+    color: #021731;
+    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 34px;
+}
+
+.sobre-pilares h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #308CFA;
+    border-radius: 999px;
+    margin: 14px auto 0;
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.pilar-card {
+    background: white;
+    padding: 30px 24px;
+    border-radius: 24px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pilar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 34px rgba(0,0,0,0.18);
+}
+
+.pilar-card h3 {
+    color: #308CFA;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.pilar-card p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-video-card {
+        max-width: 820px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-hero {
+        padding: 62px 0;
+        text-align: center;
+    }
+
+    .sobre-hero h1 {
+        font-size: 31px;
+    }
+
+    .sobre-hero p {
+        font-size: 16px;
+    }
+
+    .sobre-section {
+        padding: 44px 0;
+    }
+
+    .sobre-texto {
+        padding: 28px 20px;
+        border-radius: 22px;
+    }
+
+    .sobre-texto h2,
+    .sobre-pilares h2 {
+        font-size: 27px;
+    }
+
+    .sobre-texto p {
+        font-size: 15.5px;
+    }
+
+    .sobre-destaque {
+        padding: 22px 18px;
+    }
+
+    .sobre-destaque h3 {
+        font-size: 19px;
+    }
+
+    .sobre-video-card {
+        padding: 10px;
+        border-radius: 22px;
+    }
+
+    .video-wrapper {
+        border-radius: 16px;
+    }
+
+    .sobre-pilares {
+        padding: 46px 0;
+    }
+
+    .pilar-card {
+        padding: 26px 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .sobre-hero h1 {
+        font-size: 27px;
+    }
+
+    .sobre-etiqueta {
+        font-size: 13px;
+    }
+
+    .sobre-cta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   PÁGINA UNIDADES
+========================= */
+
+.unidades-hero {
+    background:#021731;
+    background-size: cover;
+    background-position: center right;
+    color: white;
+    padding: 90px 0;
+}
+
+.unidades-hero-content {
+    max-width: 990px;
+}
+
+.unidades-hero h1 {
+    font-size: 48px;
+    line-height: 1.08;
+    margin-bottom: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.unidades-hero h1 span {
+    color: #ffc107;
+}
+
+.unidades-hero p {
+    font-size: 19px;
+    line-height: 1.55;
+    max-width: 720px;
+    color: rgba(255,255,255,0.92);
+}
+
+.unidades-page {
+    background: #dddbdb;
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-title h2 {
+    color: #021731;
+    font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 12px;
+}
+
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 82px;
+    height: 4px;
+    background: #308CFA;
+    border-radius: 999px;
+    margin: 14px auto 0;
+}
+
+.section-title p {
+    color: #444;
+    font-size: 18px;
+}
+
+.unidades-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 34px;
+}
+
+.loja-card {
+    background: white;
+    display: grid;
+    grid-template-columns: 320px minmax(260px, 1fr) minmax(330px, 0.95fr);
+    gap: 26px;
+    align-items: stretch;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loja-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(0,0,0,0.2);
+}
+
+.loja-imagem {
+    border-radius: 22px;
+    overflow: hidden;
+    background: #021731;
+    min-height: 230px;
+}
+
+.loja-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.loja-info {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loja-cidade {
+    display: inline-block;
+    width: fit-content;
+    background: rgba(48,140,250,0.12);
+    color: #308CFA;
+    border: 1px solid rgba(48,140,250,0.28);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.loja-info h3 {
+    color: #021731;
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loja-info p {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.loja-botoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-loja {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.btn-loja:hover {
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.04);
+}
+
+.btn-azul {
+    background: #021731;
+    color: white;
+}
+
+.btn-amarelo {
+    background: #fbba23;
+    color: #021731;
+}
+
+.mapa-wrapper {
+    min-height: 260px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 4px solid #021731;
+}
+
+.mapa-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    border: 0;
+    display: block;
+}
+
+.unidades-cta-final {
+    background: #021731;
+    color: white;
+    padding: 64px 0;
+    text-align: center;
+}
+
+.cta-final-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #308CFA;
+}
+
+.cta-final-content p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.9);
+}
+
+@media (max-width: 1200px) {
+    .loja-card {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .mapa-wrapper {
+        grid-column: 1 / -1;
+        min-height: 320px;
+    }
+
+    .mapa-wrapper iframe {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .unidades-hero {
+        padding: 62px 0;
+        text-align: center;
+    }
+
+    .unidades-hero h1 {
+        font-size: 31px;
+    }
+
+    .unidades-hero p {
+        font-size: 16px;
+    }
+
+    .unidades-page {
+        padding: 46px 0;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .section-title p {
+        font-size: 16px;
+    }
+
+    .loja-card {
+        grid-template-columns: 1fr;
+        padding: 14px;
+        border-radius: 24px;
+        gap: 18px;
+    }
+
+    .loja-imagem {
+        min-height: 210px;
+        border-radius: 18px;
+    }
+
+    .loja-info {
+        text-align: center;
+        padding: 6px 8px 0;
+        align-items: center;
+    }
+
+    .loja-info h3 {
+        font-size: 24px;
+    }
+
+    .loja-info p {
+        font-size: 15.5px;
+        margin-bottom: 18px;
+    }
+
+    .loja-botoes {
+        justify-content: center;
+    }
+
+    .btn-loja {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mapa-wrapper {
+        min-height: 280px;
+        border-radius: 18px;
+    }
+
+    .mapa-wrapper iframe {
+        min-height: 280px;
+    }
+
+    .unidades-cta-final {
+        padding: 48px 0;
+    }
+
+    .cta-final-content h2 {
+        font-size: 28px;
+    }
+
+    .cta-final-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .unidades-hero h1 {
+        font-size: 27px;
+    }
+
+    .loja-card {
+        padding: 12px;
+    }
+
+    .loja-imagem {
+        min-height: 180px;
+    }
+
+    .mapa-wrapper,
+    .mapa-wrapper iframe {
+        min-height: 240px;
+    }
+}
