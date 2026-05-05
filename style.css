@@ -103,7 +103,7 @@ nav a:hover {
     display: inline-block;
     width: 246px;
     height: 42px;
-    background-image: url(/imagens&icones/BOTÃO\ FALE\ CONOSCO.png);
+    background-image: url(./imagens/BOTÃO\ FALE\ CONOSCO.png);
     background-size: cover;
     background-position: center;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -111,7 +111,7 @@ nav a:hover {
 }
 
 .btn_faleconosco:hover {
-    background-image: url(/imagens&icones/FALE\ CONOSCO_hover.png);
+    background-image: url(./imagens/FALE\ CONOSCO_hover.png);
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 12px 25px rgba(0,0,0,0.35);
 }
@@ -155,7 +155,7 @@ nav a:hover {
 .hero {
     height: 440px;
     background-color: #021731;
-    background-image: url(/imagens&icones/Section\ 2.png);
+    background-image: url(./imagens/Section\ 2.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -247,7 +247,7 @@ nav a:hover {
     display: inline-block;
     width: 250px;
     height: 42px;
-    background-image: url(/imagens&icones/ver\ todos\ os\ servicos.png);
+    background-image: url(./imagens/ver\ todos\ os\ servicos.png);
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease;
@@ -775,7 +775,7 @@ nav a:hover {
 .sobre-hero {
     background:
         linear-gradient(90deg, rgba(2,23,49,0.98), rgba(2,23,49,0.88), rgba(2,23,49,0.62)),
-        url(/imagens&icones/Section\ 2.png);
+        url(./imagens/Section\ 2.png);
     background-size: cover;
     background-position: center right;
     color: white;
