@@ -47,7 +47,7 @@
 
 
 <!-- SOBRE NÓS -->
-<section class="sobre-section">
+<section class="sobre-section reveal">
     <div class="container sobre-grid">
 
         <div class="sobre-texto">
@@ -100,7 +100,7 @@
 </section>
 
 <!-- PILARES -->
-<section class="sobre-pilares">
+<section class="sobre-pilares reveal">
     <div class="container">
         <h2>O que move a Solustec</h2>
 
@@ -178,19 +178,6 @@
     </div>
 </footer>
 
-<script>
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        toggle.classList.toggle('active');
-
-        const menuAberto = menu.classList.contains('active');
-        toggle.setAttribute('aria-expanded', menuAberto);
-    });
-}
-</script>
+<script src="script.js"></script>
 </body>
 </html>
