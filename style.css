@@ -5,13 +5,16 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
     width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
 }
 
 body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
     background: #dddbdb;
     font-family: 'Roboto', sans-serif;
 }
@@ -1279,6 +1282,19 @@ nav a:hover {
     color: rgba(255,255,255,0.9);
 }
 
+/* Corrige barra de rolagem extra do widget de avaliações */
+.testimonials,
+.testimonial-cards {
+    overflow: visible !important;
+}
+
+.testimonial-cards iframe,
+.testimonial-cards > div,
+.elfsight-app-1f522b1d-9d73-436c-a7bb-5d736d52cbbb {
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
 @media (max-width: 1200px) {
     .loja-card {
         grid-template-columns: 280px 1fr;
@@ -1292,6 +1308,13 @@ nav a:hover {
     .mapa-wrapper iframe {
         min-height: 320px;
     }
+}
+    .testimonials {
+    padding: 42px 10px;
+}
+
+.testimonial-cards {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -1381,7 +1404,13 @@ nav a:hover {
         font-size: 16px;
     }
 }
+.testimonials {
+    padding: 42px 10px;
+}
 
+.testimonial-cards {
+    width: 100%;
+}
 @media (max-width: 420px) {
     .unidades-hero h1 {
         font-size: 27px;
@@ -1399,4 +1428,11 @@ nav a:hover {
     .mapa-wrapper iframe {
         min-height: 240px;
     }
+}
+.testimonials {
+    padding: 42px 10px;
+}
+
+.testimonial-cards {
+    width: 100%;
 }
