@@ -1069,6 +1069,7 @@ nav a:hover {
     }
 
     .unidades-hero {
+    background-image: url(./imagens/encontre_media.png);    
     padding: 60px 20px;
     background-position: center;
 }
