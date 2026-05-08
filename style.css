@@ -1415,6 +1415,7 @@ nav a:hover {
     .unidades-hero {
         padding: 62px 0;
         text-align: center;
+        background-image: url(./imagens/encontre_media.png);
     }
 
     .unidades-hero h1 {
