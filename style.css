@@ -176,16 +176,17 @@ nav a:hover {
     padding: 60px;
 }
 
-.hero-unidade {
+.hero-produto {
     height: 440px;
     background-color: #021731;
-    background-image: url(./imagens/Section\ 2.png);
+    background-image: url(./imagens/bannerprodutos.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     padding: 60px;
 }
+
 
 .hero-content {
     display: flex;
