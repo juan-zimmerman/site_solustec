@@ -313,6 +313,109 @@ nav a:hover {
     border-radius: 12px; /* opcional, pra manter o estilo */
 }
 
+.casos-reais {
+  padding: 50px 6%;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  text-align: center;
+}
+
+.casos-reais h2 {
+  font-size: 28px;
+  color: #0b1f3a;
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.casos-reais > p {
+  font-size: 18px;
+  color: #111827;
+  margin-bottom: 30px;
+}
+
+.casos-reais > p span {
+  color: #0066ff;
+  font-weight: 700;
+}
+
+.cards-casos {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card-caso {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 8px 22px rgba(0, 40, 90, 0.10);
+  border: 1px solid #e5eaf0;
+}
+
+.imagem-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imagem-dupla div {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+}
+
+.imagem-dupla img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagem-dupla strong {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: #2477e8;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-weight: 800;
+}
+
+.conteudo-card {
+  padding: 18px;
+}
+
+.conteudo-card h3 {
+  font-size: 17px;
+  color: #111827;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.conteudo-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.conteudo-card small {
+  font-size: 13px;
+  color: #222;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .cards-casos {
+    grid-template-columns: 1fr;
+  }
+
+  .imagem-dupla div {
+    height: 190px;
+  }
+}
 
 .btn_vertodos {
     display: inline-block;
