@@ -1012,8 +1012,8 @@ nav a:hover {
 
         background:linear-gradient(
             90deg,
-            rgba(2,23,49,.95),
-            rgba(2,23,49,.85),
+            rgba(2, 23, 49, 0.613),
+            rgba(2, 23, 49, 0.589),
             rgba(2,23,49,.55)
         );
 
