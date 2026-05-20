@@ -109,8 +109,9 @@
   <p>Problemas que <span>resolvemos</span> todos os dias.</p>
 
   <div class="cards-casos">
-    <article class="card-caso">
+    <article class="card-caso" onclick="abrirGaleria(0)">
       <div class="imagem-dupla">
+        
         <div>
           <img src="./imagens/Caso1Original.png" alt="Torneira antes da adaptação">
           <strong>ANTES</strong>
@@ -128,7 +129,7 @@
       </div>
     </article>
 
-    <article class="card-caso">
+    <article class="card-caso" onclick="abrirGaleria(1)">
       <div class="imagem-dupla">
         <div>
           <img src="./imagens/caso2antes.jpeg" alt="Antes do misturador">
@@ -147,7 +148,7 @@
       </div>
     </article>
 
-    <article class="card-caso">
+    <article class="card-caso" onclick="abrirGaleria(2)">
       <div class="imagem-dupla">
         <div>
           <img src="./imagens/caso3-antes.jpg" alt="Antes da adaptação">
@@ -225,5 +226,13 @@
     </div>
 </footer>
 <script src="script.js"></script>
+<div id="lightbox" class="lightbox">
+  <button class="fechar" onclick="fecharGaleria()">×</button>
+  <button class="seta esquerda" onclick="trocarFoto(-1)">‹</button>
+
+  <img id="fotoLightbox" src="" alt="Foto do caso real">
+
+  <button class="seta direita" onclick="trocarFoto(1)">›</button>
+</div>
 </body>
 </html>

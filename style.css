@@ -352,6 +352,99 @@ nav a:hover {
   text-align: left;
   box-shadow: 0 8px 22px rgba(0, 40, 90, 0.10);
   border: 1px solid #e5eaf0;
+  cursor: pointer;
+  transition: 0.35s ease;
+  
+}
+
+.card-caso:hover {
+ transform: scale(1.1);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,0.85);
+
+    z-index:99999;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox.ativo{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:80%;
+    max-height:80vh;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 0 50px rgba(0,0,0,.5);
+
+    object-fit:contain;
+}
+
+.fechar{
+    position:absolute;
+    top:20px;
+    right:35px;
+
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+}
+
+.seta{
+    position:absolute;
+
+    top:50%;
+    transform:translateY(-50%);
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#308CFA;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+.esquerda{
+    left:30px;
+}
+
+.direita{
+    right:30px;
+}
+
+.seta:hover{
+    transform:translateY(-50%) scale(1.1);
+}
+
+.fechar:hover{
+    transform:scale(1.15);
 }
 
 .imagem-dupla {
@@ -721,6 +814,77 @@ nav a:hover {
         max-width: 100%;
         text-align: center;
     }
+
+    .caso-card {
+  cursor: pointer;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 15, 35, 0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.ativo {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.fechar {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #308CFA;
+  color: white;
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.esquerda {
+  left: 35px;
+}
+
+.direita {
+  right: 35px;
+}
+
+@media (max-width: 768px) {
+  .lightbox img {
+    max-width: 92%;
+    max-height: 75%;
+  }
+
+  .seta {
+    width: 42px;
+    height: 42px;
+    font-size: 28px;
+  }
+}
 
     .hero-text h1 {
         font-size: 26px;
