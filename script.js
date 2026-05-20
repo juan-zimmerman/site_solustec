@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ==========================
     // MENU MOBILE
+    // ==========================
+
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
@@ -14,59 +17,97 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.getElementById("lightbox")
-.addEventListener("click", function(e){
 
-    if(e.target.id==="lightbox"){
-        fecharGaleria();
+    // ==========================
+    // GALERIA DOS CASOS REAIS
+    // ==========================
+
+    const galerias = [
+        [
+            './imagens/Caso1Original.png',
+            './imagens/Caso1Realizado.png'
+        ],
+        [
+            './imagens/caso2antes.jpeg',
+            './imagens/caso2depois.jpeg'
+        ],
+        [
+            './imagens/caso3-antes.jpg',
+            './imagens/caso3-depois.jpg'
+        ]
+    ];
+
+    let galeriaAtual = 0;
+    let fotoAtual = 0;
+
+    window.abrirGaleria = function(index) {
+        const lightbox = document.getElementById('lightbox');
+        const fotoLightbox = document.getElementById('fotoLightbox');
+
+        if (!lightbox || !fotoLightbox) return;
+        if (!galerias[index]) return;
+
+        galeriaAtual = index;
+        fotoAtual = 0;
+
+        fotoLightbox.src = galerias[galeriaAtual][fotoAtual];
+        lightbox.classList.add('ativo');
+        document.body.classList.add('sem-scroll');
+    };
+
+    window.fecharGaleria = function() {
+        const lightbox = document.getElementById('lightbox');
+
+        if (!lightbox) return;
+
+        lightbox.classList.remove('ativo');
+        document.body.classList.remove('sem-scroll');
+    };
+
+    window.trocarFoto = function(direcao) {
+        const fotoLightbox = document.getElementById('fotoLightbox');
+
+        if (!fotoLightbox) return;
+        if (!galerias[galeriaAtual]) return;
+
+        fotoAtual += direcao;
+
+        if (fotoAtual < 0) {
+            fotoAtual = galerias[galeriaAtual].length - 1;
+        }
+
+        if (fotoAtual >= galerias[galeriaAtual].length) {
+            fotoAtual = 0;
+        }
+
+        fotoLightbox.src = galerias[galeriaAtual][fotoAtual];
+    };
+
+    const lightbox = document.getElementById('lightbox');
+
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                fecharGaleria();
+            }
+        });
     }
 
-});
-const galerias = [
-  [
-    "./imagens/Caso1Original.png",
-    "./imagens/Caso1Realizado.png"
-  ],
-  [
-    "./imagens/caso2antes.jpeg",
-    "./imagens/caso2depois.jpeg"
-  ],
-  [
-    "./imagens/caso3-antes.jpg",
-    "./imagens/caso3-depois.jpg"
-  ]
-];
+    document.addEventListener('keydown', (e) => {
+        const lightboxAtivo = document.querySelector('.lightbox.ativo');
 
-let galeriaAtual = 0;
-let fotoAtual = 0;
+        if (!lightboxAtivo) return;
 
-window.abrirGaleria = function(index) {
-  galeriaAtual = index;
-  fotoAtual = 0;
+        if (e.key === 'Escape') fecharGaleria();
+        if (e.key === 'ArrowLeft') trocarFoto(-1);
+        if (e.key === 'ArrowRight') trocarFoto(1);
+    });
 
-  document.getElementById("fotoLightbox").src = galerias[galeriaAtual][fotoAtual];
-  document.getElementById("lightbox").classList.add("ativo");
-};
 
-window.fecharGaleria = function() {
-  document.getElementById("lightbox").classList.remove("ativo");
-};
-
-window.trocarFoto = function(direcao) {
-  fotoAtual += direcao;
-
-  if (fotoAtual < 0) {
-    fotoAtual = galerias[galeriaAtual].length - 1;
-  }
-
-  if (fotoAtual >= galerias[galeriaAtual].length) {
-    fotoAtual = 0;
-  }
-
-  document.getElementById("fotoLightbox").src = galerias[galeriaAtual][fotoAtual];
-};
-
+    // ==========================
     // ANIMAÇÃO AO SCROLL
+    // ==========================
+
     const elementos = document.querySelectorAll('.reveal');
 
     function revelarElementos() {
@@ -82,5 +123,7 @@ window.trocarFoto = function(direcao) {
 
     window.addEventListener('scroll', revelarElementos);
     window.addEventListener('load', revelarElementos);
+
+    revelarElementos();
 
 });
