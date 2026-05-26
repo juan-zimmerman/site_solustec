@@ -25,15 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const galerias = [
         [
             './imagens/Caso1Original.png',
-            './imagens/Caso1Realizado.png'
+            './imagens/Caso1Realizado.png',
+            './imagens/Caso 2.1.jpeg',
+            './imagens/caso2.2.jpeg'
         ],
         [
             './imagens/caso2antes.jpeg',
             './imagens/caso2depois.jpeg'
         ],
         [
-            './imagens/caso3-antes.jpg',
-            './imagens/caso3-depois.jpg'
+            './imagens/caso3.0.jpeg',
+            './imagens/caso3.1.jpeg',
+            './imagens/caso3.2.jpeg',
+            './imagens/caso3.3.jpeg',
+            './imagens/caso3.4.jpeg'
         ]
     ];
 
